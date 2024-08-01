@@ -4,6 +4,7 @@ from tabulate import tabulate
 class CommandParser:
     def parse_json(self, json_data, query):
         try:
+            json_data = (json_data.replace("json", "").replace("JSON", "").lstrip("`").rstrip("`"))
             data = json.loads(json_data)
             self.parse(data, query)
         except json.JSONDecodeError as e:

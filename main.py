@@ -19,7 +19,7 @@ def main():
         parser.parse_json(response, args.query)
 
     elif args.scenario:
-        prompt = f"{scenario_format_} strictly adhere to the given JSON format above and provide Linux commands to accomplish the action described in the scenario: '{args.query}' in JSON format."
+        prompt = f"{scenario_format_} strictly adhere to the given JSON format above and provide similar results to the scenario: '{args.query}' in JSON format. Don't include the scenario I sent in the response, use the scenario that is asked to you only."
         response = client.generate_content(prompt)
         parser = ScenarioParser()
         parser.parse_json(response, args.query)

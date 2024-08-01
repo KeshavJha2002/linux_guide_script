@@ -1,7 +1,7 @@
 import os
 import configparser
 
-CONFIG_FILE = 'config.ini'
+CONFIG_FILE = '/mnt/c/Users/jhak7/Desktop/Friendly_CLI/config.ini'
 
 class Config:
     def __init__(self):
